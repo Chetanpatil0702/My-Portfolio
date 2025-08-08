@@ -73,7 +73,7 @@
           </li>
 
         <li>
-            <a href="https://drive.google.com/uc?export=download&id=1crN6L-Wvb7GD7uVVVHSViBbv3jWdR-UN" 
+            <a href="https://https://drive.google.com/file/d/1EI6TU9ZCM9F-OiC4FTjOprTR0OEyvjH_/view?usp=sharing" 
             class="btn btn-primary" 
             target="_blank" 
             rel="noopener noreferrer">
@@ -401,18 +401,17 @@
 
       <div class="wrapper">
 
-        <form action="" class="contact-form">
+        <form name="contact" method="POST" data-netlify="true" class="contact-form">
 
           <input type="text" name="name" placeholder="Name" required class="contact-input">
-
           <input type="email" name="email" placeholder="Email" required class="contact-input">
-
           <textarea name="message" placeholder="Message" required class="contact-input"></textarea>
+  
+          <!-- Netlify bot field to prevent spam -->
+          <input type="hidden" name="form-name" value="contact">
 
           <button type="submit" class="btn-submit">Submit Message</button>
-
         </form>
-
         <ul class="contact-list">
 
           <li class="contact-item">
