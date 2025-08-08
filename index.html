@@ -401,17 +401,24 @@
 
       <div class="wrapper">
 
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-
-          <input type="text" name="name" placeholder="Name" required class="contact-input">
-          <input type="email" name="email" placeholder="Email" required class="contact-input">
-          <textarea name="message" placeholder="Message" required class="contact-input"></textarea>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
   
-          <!-- Netlify bot field to prevent spam -->
-          <input type="hidden" name="form-name" value="contact">
+  <!-- Required hidden field for Netlify -->
+  <input type="hidden" name="form-name" value="contact">
+  
+  <!-- Honeypot field for spam bots (hidden from users) -->
+  <p style="display:none">
+    <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+  </p>
 
-          <button type="submit" class="btn-submit">Submit Message</button>
-        </form>
+  <!-- Your form fields -->
+  <input type="text" name="name" placeholder="Name" required class="contact-input">
+  <input type="email" name="email" placeholder="Email" required class="contact-input">
+  <textarea name="message" placeholder="Message" required class="contact-input"></textarea>
+
+  <button type="submit" class="btn-submit">Submit Message</button>
+</form>
+
         <ul class="contact-list">
 
           <li class="contact-item">
